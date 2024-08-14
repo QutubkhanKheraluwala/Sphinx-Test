@@ -8,6 +8,7 @@ pipeline {
         }
         stage(Compile) {
             steps {
+                sh '.venv/Scripts/activate'
                 sh 'cd docs'
                 sh 'make html'
             }
