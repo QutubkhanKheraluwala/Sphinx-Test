@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    stages {
+        stage(SCM) {
+            steps {
+                git branch: 'main', credentialsId: '2a0b3859-071b-446a-a4d8-c5a6417a9b3a', url: 'https://github.com/QutubkhanKheraluwala/Sphinx-Test.git'
+            }        
+        }
+        stage(Compile) {
+            steps {
+                sh 'make html'
+            }
+        }
+    }
+}
