@@ -9,8 +9,7 @@ pipeline {
         stage(Compile) {
             steps {
                 bat '.venv/Scripts/activate'
-                bat 'cd docs'
-                bat 'make html'
+                bat 'sphinx-build -M html docs/source/ docs/build/'
             }
         }
     }
