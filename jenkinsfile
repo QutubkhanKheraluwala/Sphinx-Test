@@ -12,9 +12,9 @@ pipeline {
         }
         stage(Compile) {
             steps {
-                bat '.venv\\Scripts\\activate.bat'
+                bat 'call .venv\\Scripts\\activate.bat'
                 bat 'cd'
-                bat 'sphinx-build -M html docs/source/ docs/build/'
+                bat 'python -m sphinx -M html docs/source/ docs/build/'
             }
         }
     }
