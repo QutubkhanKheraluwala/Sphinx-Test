@@ -13,6 +13,7 @@ pipeline {
         stage(Compile) {
             steps {
                 bat 'call .venv\\Scripts\\activate.bat'
+                bat 'pip install --upgrade pip'
                 bat 'cd'
                 bat 'python -m sphinx -M html docs/source/ docs/build/'
             }
