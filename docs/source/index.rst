@@ -5,7 +5,8 @@
 
 Welcome to Lumache's documentation
 ==================================
-
+**PIPELINE SUCCESSFULLY BUILT ON AUG 16,2024 2:01 PM**
+------------------------------------------------------
 
 .. toctree::
    :numbered:
