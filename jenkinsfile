@@ -1,5 +1,9 @@
 pipeline {
     agent any
+
+    environment{
+        PYTHON_EXE = 'C:\\Users\\Kheraluwala\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\python.exe'
+    }
     stages {
         stage(SCM) {
             steps {
@@ -8,7 +12,7 @@ pipeline {
         }
         stage(Compile) {
             steps {
-                bat '.venv\\Scripts\\activate'
+                bat '.venv\\Scripts\\activate.bat'
                 bat 'cd'
                 bat 'sphinx-build -M html docs/source/ docs/build/'
             }
